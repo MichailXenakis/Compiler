@@ -1,0 +1,49 @@
+program x{
+	var a,b,c,d;
+	var p,i;
+	procedure block (in a,inout b){
+		var v,x;
+		b:=3;
+		x:=1;
+		while(v<=b+3 and x>=1){
+			v:=3;
+			x:=(a+1)/2;
+		};
+	}
+	
+	function create(inout c){
+		var l;
+		if (c>0){
+			while(not[l>=1]){
+				l:=c/2+1;	
+			};
+		};
+		return (l);
+	}
+	p:=2;
+	c:=2;
+	d:=5;
+	b:=0;
+	if(p>0 and c<>0 and d=5){
+		do{
+			c:=c+1;
+			p:=p-1;
+		}while(p>0);	
+		d:=3+(b-1)*2+6/(b+1);
+	}else{
+		d:=3+(b-1)*2+3/(b+1);
+	};
+	print (d);
+	for i:=0 to 10 {
+		p:=p+2;	
+		if (p<>0){
+			if (c=4){
+				c:=c-1;
+				d:=2*c+1;
+				call create(inout c);
+			}
+		}
+	};
+	print (p);
+	print (c);
+}
